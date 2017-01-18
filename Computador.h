@@ -6,12 +6,20 @@ class Computador
 public:
     Computador();
     ~Computador();
+    Computador (string &);
+    Computador ( const Computador &);
     
-    void mostrarMemoria();
+    void mostrarMemoria(const int &);
+    int tamDiskRig();
+    void CPU();
     
 private:
     
-   int tamMemoria;
+   static int tamMemoria;
+   int plVideo;
+   string nome_SO;
+   string nomeLogin;
+   string senhaLogin;
 
 };
 
