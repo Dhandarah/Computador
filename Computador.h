@@ -1,5 +1,6 @@
 #ifndef COMPUTADOR_H
 #define COMPUTADOR_H
+#include <Data.h>
 
 class Computador
 {
@@ -20,6 +21,7 @@ private:
    int plVideo;
    int plRede;
    int plSom;
+   const DATA dataFabricacao;
   
 
    string nome_SO;

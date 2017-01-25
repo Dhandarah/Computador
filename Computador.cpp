@@ -1,6 +1,6 @@
 #include "Computador.h"
 #include <iostream>
-
+#include <string>
 using std::cout;
 
 int Computador::codFabricante = 219231823912;
