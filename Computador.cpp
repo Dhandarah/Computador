@@ -65,6 +65,12 @@ void Processador::nomeDoFabricante(const string &nomedofabricante)
 {
     fabricante[nomeFabricante] = nomedofabricante;
 }
+
+ ostream &operator<<( ostream &output, const Computador &informacoes)
+ {
+     output<<"O tamanho da memoria princial e da memoria secundaria "<<informacoes.memoPrincipal
+           "--" <<informacoes.memoSecundaria;
+ }
 Computador::~Computador()
 {
 }

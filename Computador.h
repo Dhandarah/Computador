@@ -10,6 +10,9 @@ public:
     Computador (const string &, const string &);
     Computador ( const Computador &);
     
+    friend ostream &operator<<( ostream &, const Computador &);
+    const Computador &operator = (const Computador &);
+    
     void memoria(const int &);
     int dispositivos_IO();
     void infCPU() const;

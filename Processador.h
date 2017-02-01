@@ -6,9 +6,12 @@ class Processador
 {
 public:
     Processador();  
+    Processador(const int &, const string &);
+    Processador(const Processador &);
+    friend ostream &operator<<( ostream &, const Processador &);
     string definirFabricante(const string &);
     void exibidados();
-    
+    const Processador &operator = (const Processador &);
         
 private:
    int coreProcessador;
