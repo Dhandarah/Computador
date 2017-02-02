@@ -71,6 +71,22 @@ void Processador::nomeDoFabricante(const string &nomedofabricante)
      output<<"O tamanho da memoria princial e da memoria secundaria "<<informacoes.memoPrincipal
            "--" <<informacoes.memoSecundaria;
  }
+const Computador& Computador::operator=(const Computador &c)
+ {
+   memoPrincipal = c.memoPrincipal;
+   memoSecundaria = c.memoSecundaria;
+   plVideo = c.plVideo;
+   plRede = c.plRede;
+   plSom = c.plSom;
+
+   nome_SO = c.nome_SO;
+   nomeLogin = c.nomeLogin;
+   senhaLogin = c.senhaLogin;
+
+   info = new nome_SO[size];
+   for (int i=0; i<size; i++)
+    info[i] = c.info[i];
+ }
 Computador::~Computador()
 {
 }
