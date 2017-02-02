@@ -34,7 +34,18 @@ Processador::Processador()
            <<fabricante.coreProcessador;
  }
  
- const Processador::&operator=(const Processador &array)
+const Processador& Processador::operator=(const Processador &array)
+ {
+    coreProcessador = array.coreProcessador;
+    clockProcessador = array.clockProcessador;
+    cacheProcessador = array.cacheProcessador;
+    potenciaProcessador = array.potenciaProcessador;
+
+    info = new nomeFabricante[size];
+    for (int i=0; i<size; i++)
+      info[i] = array.info[i];
+    
+ }
     
 Processador::~Processador()
 {
