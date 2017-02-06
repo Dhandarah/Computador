@@ -1,8 +1,19 @@
-#include <stdio.h>
-#include <string>
+#include <iostream>
+#include "Computador.h"
+#include "Processador.h"
 
-int main(int argc, char **argv)
+using namespace std;
+
+int main()
 {
-	printf("hello world\n");
+	Computador A,B;
+	A.memoria(15,34);
+	B.dispositivos_IO;
+
+	Processador obj1,obj2;
+	obj1.exibirDados;
+	obj2.definirFabricante;
+
+	cout<<A.memoria<<;
 	return 0;
 }
