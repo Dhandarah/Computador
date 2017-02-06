@@ -3,7 +3,7 @@
 #include <iostream>
 using std::cout;
 
-const string Processador::nomeFabricante[] = 10;
+const string Processador::nomeFabricante = 10;
 
 
 Processador::Processador()
@@ -65,4 +65,5 @@ const Processador& Processador::operator=(const Processador &array)
     
 Processador::~Processador()
 {
+    delete Processador;
 }

@@ -13,7 +13,7 @@ public:
     bool operator==(const Computador &) const;
     bool operator!=(const Computador &) const;
 
-    void memoria(const int &);
+    static void memoria(const int &);
     int dispositivos_IO();
     void infCPU() const;
     

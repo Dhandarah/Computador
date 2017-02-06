@@ -1,8 +1,11 @@
 #include <iostream>
 #include "Computador.h"
 #include "Processador.h"
-
-using namespace std;
+#include "Data.h"
+#include <string.h>
+using namespace std::cout;
+using namespace std::cin;
+using namespace ostream;
 
 int main()
 {

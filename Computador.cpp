@@ -10,6 +10,7 @@ Computador::Computador()
 {
     this->nomeLogin = "desconhecido";
     this->senhaLogin = "****";
+    this->ptr=0;
 }
  Computador::Computador (const string &nomeLogin,const string &senhaLogin)
  {
@@ -35,6 +36,10 @@ void memoria(const int &mP, const int &mS)
 {
   memoPrincipal = mP;
   memoSecundaria = mS;
+  
+  cout<<"Fabricante"<<codFabricante<<
+  "Memoria principal"<<memoPrincipal<<
+  "Memoria Secundaria" <<memoSecundaria;
 }
 
 int dispositivos_IO()
@@ -89,4 +94,5 @@ int dispositivos_IO()
  }
 Computador::~Computador()
 {
+    delete Computador;
 }

@@ -16,9 +16,9 @@ Data::~Data()
 {
 }
 
-int Data::verificarDia(int dia) const
+int Data::void verificarData(int dia) 
 {
-    static const int diasDoMes[13] = {0,31,28,31,30,30,31,31,30,31,30,31};
+    int diasDoMes[13] = {0,31,28,31,30,30,31,31,30,31,30,31};
     
     if (dia>0 && dia<=diasDoMes[mes])
         return dia;

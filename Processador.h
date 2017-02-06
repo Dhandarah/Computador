@@ -26,7 +26,7 @@ private:
    int potenciaProcessador;
    int *ptr;
    
-   const static string nomeFabricante = 10;
+   const static int nomeFabricante = 10;
    string fabricante[nomeFabricante];
     
 

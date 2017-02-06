@@ -6,16 +6,17 @@ class Data
 public:
     Data();
     ~Data();
+    Data(const int, const int);
     Data(int =1, int=1, int=1);
     Data(const Data &);
     
-    void verificarData(int, int, int);
+    void verificarData(int);
     
 private:
     int dia;
     int mes;
     int ano;
-    const int diaDoMes[13];
+    int diaDoMes[13];
 
 };
 
