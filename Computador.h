@@ -13,9 +13,9 @@ public:
     bool operator==(const Computador &) const;
     bool operator!=(const Computador &) const;
 
-    static void memoria(const int &);
-    int dispositivos_IO();
-    void infCPU() const;
+    void exibirMemoria(const int &);
+    int exibirDispositivos_IO();
+    
     
 private: 
    static int codFabricante;
