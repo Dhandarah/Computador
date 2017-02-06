@@ -94,5 +94,4 @@ int dispositivos_IO()
  }
 Computador::~Computador()
 {
-    delete Computador;
 }
