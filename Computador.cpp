@@ -5,7 +5,7 @@ using std::cout;
 
 int Computador::codFabricante = 219231823912;
 
-const string Processador::clockProcessador = '3,6 GHz';
+
 Computador::Computador()
 {
     this->nomeLogin = "desconhecido";
@@ -33,59 +33,58 @@ Computador::Computador()
 
 void memoria(const int &mP, const int &mS)
 {
-	memoPrincipal = mP;
-	memoSecundaria = mS;
+  memoPrincipal = mP;
+  memoSecundaria = mS;
 }
 
 int dispositivos_IO()
 {
-	plVideo = 512;
-	plSom = 16 ;
-	plRede = 48;
+  plVideo = 512;
+  plSom = 16 ;
+  plRede = 48;
 
-	cout<< "A placa de video possui a quantidade :"<<plVideo<< "De memoria dedicada." <<;
-	    << "A placa de som trabalha com: "<<plSom<< "Bits."<<;
-	    <<"A placa de rede possui um nó de "<<plRede<< "Bits."<<;
+  cout<< "A placa de video possui a quantidade :"<<plVideo<< "De memoria dedicada." <<;
+      << "A placa de som trabalha com: "<<plSom<< "Bits."<<;
+      <<"A placa de rede possui um nó de "<<plRede<< "Bits."<<;
 }
 
-void infCPU() const
-{}
-
-Processador::Processador();
-
-void Processador::exibiDados()
-{
-   cout<<coreProcessador,
-         clockProcessador,
-         cacheProcessador,
-         potenciaProcessador<<;
-}
-
-void Processador::nomeDoFabricante(const string &nomedofabricante)
-{
-    fabricante[nomeFabricante] = nomedofabricante;
-}
 
  ostream &operator<<( ostream &output, const Computador &informacoes)
  {
      output<<"O tamanho da memoria princial e da memoria secundaria "<<informacoes.memoPrincipal
            "--" <<informacoes.memoSecundaria;
  }
-const Computador& Computador::operator=(const Computador &c)
+
+ const Computador& Computador::operator=(const Computador &c)
  {
-   memoPrincipal = c.memoPrincipal;
-   memoSecundaria = c.memoSecundaria;
-   plVideo = c.plVideo;
-   plRede = c.plRede;
-   plSom = c.plSom;
+   this->memoPrincipal = c.memoPrincipal;
+   this->memoSecundaria = c.memoSecundaria;
+   this->plVideo = c.plVideo;
+   this->plRede = c.plRede;
+   this->plSom = c.plSom;
+   delete [] info;
 
-   nome_SO = c.nome_SO;
-   nomeLogin = c.nomeLogin;
-   senhaLogin = c.senhaLogin;
+   this->info = new nome_SO[c.size]; 
 
-   info = new nome_SO[size];
-   for (int i=0; i<size; i++)
+ 
+   for (int i=0; i<c.size; i++)
     info[i] = c.info[i];
+  return *this;
+ }
+
+ bool Computador::operator == (const Computador &r) const
+ {
+  if (tamMonitor != r.tamMonitor)
+    return false;
+  for (int i=0; i<tamMonitor; i++ )
+    if (ptr[i] != r.ptr[i])
+      return false;
+
+  return true;
+ }
+ bool Computador::operator != (const Computador &r)
+ {
+  return ! (*this == r);
  }
 Computador::~Computador()
 {
