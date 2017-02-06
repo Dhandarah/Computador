@@ -6,24 +6,29 @@ class Processador
 {
 public:
     Processador();  
+    ~Processador();
     Processador(const int &, const string &);
     Processador(const Processador &);
     friend ostream &operator<<( ostream &, const Processador &);
+
+    const Processador &operator=(const Processador & );
+    bool operator==(const Processador &) const;
+    bool operator!=(const Processador &) const;
+
     string definirFabricante(const string &);
     void exibidados();
-    const Processador &operator = (const Processador &);
+    
         
 private:
    int coreProcessador;
    string clockProcessador;
    int cacheProcessador;
    int potenciaProcessador;
+   int *ptr;
    
    const static string nomeFabricante = 10;
    string fabricante[nomeFabricante];
-}
-    Processador();
-    ~Processador();
+    
 
 };
 
