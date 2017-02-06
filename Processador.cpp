@@ -65,5 +65,4 @@ const Processador& Processador::operator=(const Processador &array)
     
 Processador::~Processador()
 {
-    delete Processador;
 }
