@@ -3,7 +3,7 @@
 #include <iostream>
 using std::cout;
 
-const string Processador::nomeDoFabricante[] = 10;
+const string Processador::nomeFabricante[] = 10;
 
 
 Processador::Processador()
@@ -36,18 +36,32 @@ Processador::Processador()
  
 const Processador& Processador::operator=(const Processador &array)
  {
-    coreProcessador = array.coreProcessador;
-    clockProcessador = array.clockProcessador;
-    cacheProcessador = array.cacheProcessador;
-    potenciaProcessador = array.potenciaProcessador;
+    this->coreProcessador = array.coreProcessador;
+    this->clockProcessador = array.clockProcessador;
+    this->cacheProcessador = array.cacheProcessador;
+    this->potenciaProcessador = array.potenciaProcessador;
 
-    info = new nomeFabricante[size];
-    for (int i=0; i<size; i++)
+    info = new fabricante[nomeFabricante];
+    for (int i=0; i<nomeFabricante; i++)
       info[i] = array.info[i];
     
+ }
+
+ bool Processador::operator == (const Processador &r) const
+ {
+  if (fabricante != r.fabricante)
+    return false;
+  for (int i=0; i<fabricante; i++ )
+    if (ptr[i] != r.ptr[i])
+      return false;
+
+  return true;
+ }
+ bool Processador::operator != (const Processador &r)
+ {
+  return ! (*this == r);
  }
     
 Processador::~Processador()
 {
 }
-
