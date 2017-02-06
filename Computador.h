@@ -26,7 +26,7 @@ private:
    int plSom;
    int *ptr;
 
-   string nome_SO;
+   string nome_SO[10];
    string nomeLogin;
    string senhaLogin;
    const string tamMonitor[5]; 

@@ -40,10 +40,11 @@ const Processador& Processador::operator=(const Processador &array)
     this->clockProcessador = array.clockProcessador;
     this->cacheProcessador = array.cacheProcessador;
     this->potenciaProcessador = array.potenciaProcessador;
+    delete [] fabricante;
 
-    info = new fabricante[nomeFabricante];
+    fabricante = new fabricante[nomeFabricante];
     for (int i=0; i<nomeFabricante; i++)
-      info[i] = array.info[i];
+      fabricante[i] = array.info[i];
     
  }
 

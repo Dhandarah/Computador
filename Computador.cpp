@@ -62,13 +62,14 @@ int dispositivos_IO()
    this->plVideo = c.plVideo;
    this->plRede = c.plRede;
    this->plSom = c.plSom;
-   delete [] info;
+   this->nome_SO = c.nome_SO;
+   delete [] nome_SO;
 
-   this->info = new nome_SO[c.size]; 
+   this->nome_SO = new nome_SO[c.tamMonitor]; 
 
  
-   for (int i=0; i<c.size; i++)
-    info[i] = c.info[i];
+   for (int i=0; i<c.tamMonitor; i++)
+   tamMonitor[i] = c.tamMonitor[i];
   return *this;
  }
 
