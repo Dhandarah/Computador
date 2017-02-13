@@ -15,13 +15,14 @@ public:
 	bool operator==(const MaquinaEletronica &) const;
 	bool operator !=(const MaquinaEletronica &) const;
 
-	float calcularNumeros(float &, float &);
-	string armazenarDados(const string &);
-	void exibirDados(string &, float &);
+	
+	void verificarVoltagem(float &);
+    int turnOnOff (int &) const;
 
 private:
-	float numero1;
-	float numero2;
-	string nomeDados;
-    const int codMaquina[10];
+    int *ptr;
+    int on_off;
+	float voltagem;
+    const int vet = 10;
+    int codMaquina[vet];
 }

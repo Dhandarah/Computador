@@ -7,30 +7,74 @@ using std::cout;
 
 MaquinaEletronica::MaquinaEletronica()
 {
-	this->numero1 = 3,5;
-	this->numero2 = 7;
-	this->nomeDados = 'A';
+	this->ptr = 0;
+    this->on_off = 1;
+	this->voltagem = 0;
+    this->codMaquina[vet] = 0;
+}
 }
 
 MaquinaEletronica::MaquinaEletronica(const MaquinaEletronica &x)
 {
-	numero1 = x.numero1;
-	numero2 = x.numero2;
-	nomeDados = x.nomeDados;
+    on_off = x.on_off;
+	voltagem = x.voltagem;
+    codMaquina = x.codMaquina;
+}
 }
 
 ostream &operator<<( ostream &output, const MaquinaEletronica &n1)
 {
-	output<<n1.numero1<<'--'<<
-			n1.numero2<<'__'<<
-			n1.nomeDados<<;
+	output<<n1.on_off<<'--'<<
+			n1.voltagem<<'__'<<
+			n1.codMaquina<<;
 }
 
 const MaquinaEletronica& MaquinaEletronica::operator=(const MaquinaEletronica &vet)
 {
-	this->numero1 = vet.numero1;
-	this->numero2 = vet.numero2;
-	this->nomeDados = nomeDados;
-    this->codMaquina[10];
+	this->on_off = vet.on_off;
+	this->voltagem = vet.voltagem;
+    this->codMaquina;
+    int * Ptr = new int[codMaquina];           
+   for (int i = 0; i < codMaquina; i++)
+   {
+      cout << "Enter test " << i + 1 << " : ";
+      cin >> Ptr[i];
+   }
+   for (int i = 0; i < codMaquina; i++)
+      cout << "Test " << i + 1 << " is "<< Ptr[i] << endl;
+   delete [] Ptr;
+   return 0;
 
 }
+
+bool MaquinaEletronica::operator == (const MaquinaEletronica &r) const
+ {
+  if (codMaquina!= r.codMaquina)
+    return false;
+  for (int i=0; i<codMaquina; i++ )
+    if (ptr[i] != r.ptr[i])
+      return false;
+
+  return true;
+ }
+ bool MaquinaEletronica::operator != (const MaquinaEletronica &y)
+ {
+  return ! (*this == y);
+ }
+void verificarVoltagem(float &volt)
+{
+    if (volt == 127){
+        cout<<"127V ou 110V"<<;
+        else if(volt == 220) {
+            cout<<"220V";
+        }
+    }
+}
+
+int turnOnOff (int &num) const 
+{
+    if (num == 0)
+    cout<<"Computador Ligado!";
+        else 
+            return false;
+};
