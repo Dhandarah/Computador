@@ -34,10 +34,10 @@ const MaquinaEletronica& MaquinaEletronica::operator=(const MaquinaEletronica &v
 	this->on_off = vet.on_off;
 	this->voltagem = vet.voltagem;
     this->codMaquina;
-    int * Ptr = new int[codMaquina];           
-   for (int i = 0; i < codMaquina; i++)
+    int * Ptr = new int teste[codMaquina];           
+   for (int i = 0; i <= codMaquina; i++)
    {
-      cout << "Enter test " << i + 1 << " : ";
+      cout << "Enter teste : ";
       cin >> Ptr[i];
    }
    for (int i = 0; i < codMaquina; i++)
@@ -77,4 +77,9 @@ int turnOnOff (int &num) const
     cout<<"Computador Ligado!";
         else 
             return false;
-};
+}
+
+MaquinaEletronica::˜MaquinaEletronica()
+{
+    delete [] ptr;
+}
